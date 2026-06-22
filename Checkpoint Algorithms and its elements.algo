@@ -1,0 +1,25 @@
+algorithme checkpoint
+début
+    nb_char <-- 0
+    nb_word <-- 1  
+    nb_vow <-- 0
+    Ecrire("Entrez votre phrase caractère par caractère (terminez par un point) :")
+    Répéter
+        Lire(c)
+        nb_char <-- nb_char + 1
+        si majus(c) ∈("Y","A","E","U","O","I") alors
+            nb_vow <-- nb_vow + 1
+        fin_si
+        Si c = " " Alors
+            nb_word <-- nb_word + 1
+        Fin_Si
+    Jusqu'à c = '.'
+    Ecrire("Le nombre de caractères est : ", nb_char)
+    Ecrire("Le nombre de mots est : ", nb_word)
+    Ecrire("Le nombre de voyelles est : ", nb_vow)
+Fin
+┌────────────────────────────────────┬──────────────────────────┐
+│               Objet                │      Nature / Type       │
+├────────────────────────────────────┼──────────────────────────┤
+│nb_char,nb_word,nb_vow                        entier           │
+└────────────────────────────────────┴──────────────────────────┘
